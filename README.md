@@ -78,7 +78,7 @@ Continual learning (also known as lifelong learning) is a challenging paradigm w
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/research-cl/research.git
+   git clone https://github.com/continuum.git
    cd research
    ```
 
