@@ -1,0 +1,54 @@
+# RESEARCH Configuration File
+# Default hyperparameters for continual learning experiments
+
+# Model Configuration
+model:
+  input_dim: 784
+  hidden_dim: 256
+  output_dim: 10
+
+# Training Configuration
+training:
+  epochs: 10
+  batch_size: 32
+  lr: 0.001
+  weight_decay: 0.0001
+
+# EWC Method Configuration
+ewc:
+  ewc_lambda: 5000
+  fisher_num_samples: -1  # Use all samples for Fisher computation
+
+# Replay Method Configuration
+replay:
+  memory_size: 100
+
+# GEM Method Configuration
+gem:
+  memory_size: 200
+
+# ResearchHybrid Method Configuration
+research_hybrid:
+  ewc_lambda: 1000
+  replay_size: 300
+  heads_lr: 0.01
+  input_dim: 784
+
+# Benchmark Configuration
+benchmark:
+  num_tasks: 5
+  samples_per_task: 100
+  test_samples_per_task: 50
+
+# Data Configuration
+data:
+  num_classes: 10
+
+# Logging Configuration
+logging:
+  project_name: research
+  log_interval: 10
+
+# Device Configuration
+device:
+  use_cuda: true
